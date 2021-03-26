@@ -5,7 +5,7 @@ nav{
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color:#5D4954;
+    background-color:#05386B;
     font-family:'Poppins', sans-serif;
 }
 
@@ -23,7 +23,7 @@ nav{
     width: 30%;
 }
 .nav-links a{
-    color: rgb(226, 226, 226);
+    color: orange;
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
@@ -82,6 +82,8 @@ nav{
 body {
     margin: 0;
     font-family: Nunito Sans;
+    
+    background-color: #C2CAD0;
 }
 
 h3 {
@@ -116,6 +118,11 @@ body a {
     padding-top: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: .4s;
+    background-color: lightblue;
+    color: darkgoldenrod;
+}
+.content p{
+    color: #05386B;
 }
 
 .content:hover {
@@ -171,7 +178,7 @@ body li {
 button {
     text-align: center;
     font-size: 24px;
-    color: #fff;
+    color: orange;
     width: 100%;
     padding: 15px;
     border: 0px;
@@ -199,12 +206,13 @@ button {
     .content {
         width: 100%;
     }
+    
     .nav-links{
         position: absolute;
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background-color: #5D4954;
+        background-color:#05386B;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -215,6 +223,7 @@ button {
     .burger{
         display: block;
     }
+    
 }
 .nav-active{
     transform: translateX(0%);
@@ -243,12 +252,15 @@ button {
     
 }
 /*footer css*/
+
+
+
 .footer {
     display: flex;
     flex-flow: row wrap;
     padding: 30px 30px 20px 30px;
-    color: #2f2f2f;
-    background-color: #fff;
+    color: orange;
+    background-color:#05386B;
     border-top: 1px solid #e5e5e5;
   }
   
@@ -268,6 +280,9 @@ button {
     font-size: 15px;
     font-weight: 400;
   }
+  .footer__addr address{
+      color: orange;
+  }
   
   .nav__title {
     font-weight: 400;
@@ -276,7 +291,7 @@ button {
   
   .footer address {
     font-style: normal;
-    color: #999;
+    
   }
   
   .footer__btn {
@@ -287,7 +302,7 @@ button {
     max-width: max-content;
     background-color: rgb(33, 33, 33, 0.07);
     border-radius: 100px;
-    color: #2f2f2f;
+    color: orange;
     line-height: 0;
     margin: 0.6em 0;
     font-size: 1rem;
@@ -301,10 +316,12 @@ button {
   
   .footer li {
     line-height: 2em;
+    
   }
   
   .footer a {
     text-decoration: none;
+    
   }
   
   .footer__nav {
@@ -318,7 +335,7 @@ button {
   }
   
   .nav__ul a {
-    color: #999;
+    color: orange;
   }
   .nav__ul{
       display: inline;
@@ -328,8 +345,8 @@ button {
   .legal {
     display: flex;
     flex-wrap: wrap;
-    color: #999;
   }
+  .legal p{color: orange;}
     
   
   @media screen and (min-width: 40.375em) {
