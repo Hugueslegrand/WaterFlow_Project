@@ -1,9 +1,3 @@
-
-body {
-    margin: 0;
-    background: white;
-    background-color: #C2CAD0;
-}
 nav {
     background-color:rgb(82, 75, 191) ;
     width: 100%;
@@ -14,7 +8,7 @@ ul {
     padding: 0;
     list-style: none;
 }
-li {
+.nav1,.nav2,.nav3,.nav4,.nav5 {
     float: right;
 }
 nav a {
@@ -43,7 +37,11 @@ h1 {
     font-family: Arial;
     color: gold;
 }
-div {
+.StarWars,.Disney,.HarryPotter,
+.Marvel,.LegoCity,.Friends,
+.Batman,.Police,.Train,
+.Minecraft,.Ninjago,.Mario,
+.ToyStory,.Halo{
     border: solid 3px rgb(82, 75, 191);
     border-radius: 5px 5px 5px 5px;
     padding: 1rem;
@@ -59,7 +57,11 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
-p {
+.Text1,.Text2,.Text3,
+.Text4,.Text5,.Text6,
+.Text7,.Text8,.Text9,
+.Text10,.Text11,.Text12
+,.Text13 {
     font-family: Arial, Helvetica, sans-serif;
     border: solid 3px;
     text-align: center;
@@ -69,7 +71,6 @@ p {
     border-radius: 5px 5px 5px 5px;
     background-color: rgb(49, 98, 203);
     color: gold;
-    
 }
 h3 {
     margin-left: 34rem;
@@ -87,3 +88,102 @@ button {
     border-radius: 5px 5px 5px 5px;
     margin-bottom: 10px;
 }
+.Halo {
+    margin-bottom: 1rem;
+}
+
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    }
+    
+    body {
+    font-family: Arial;
+    margin: 0;
+    display: grid;
+    font-size: 14px;
+    background-color: #C2CAD0;
+    }
+    .footer {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 50px;
+    color: #fff;
+    background-color: rgb(82, 75, 191);
+    }
+    
+    .footer > * {
+    flex:  1 100%;
+    }
+    
+    .l-footer {
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+    }
+    
+    h2 {
+    font-weight: 400;
+    font-size: 20px;
+    }
+    
+    .footer ul {
+    list-style: none;
+    padding-left: 0;
+    }
+    
+    .footer li {
+    line-height: 2em;
+    }
+    
+    .footer a {
+    text-decoration: none;
+    }
+    
+    .r-footer {
+    display: flex;
+    flex-flow: row wrap;
+    }
+    
+    .r-footer > * {
+    flex: 1 50%;
+    margin-right: 1.25em;
+    }
+    
+    .box a {
+    color: white;
+    }
+    
+    .h-box {
+    column-count: 2;
+    column-gap: 1.25em;
+    }
+    
+    .b-footer {
+    text-align: center;
+    color: white;
+    padding-top: 50px;
+    }
+    
+    .l-footer p {
+    padding-right: 20%;
+    color: #999;
+    }   
+    
+    @media screen and (min-width: 600px) {
+    .r-footer > * {
+    flex: 1;
+    }
+    
+    .features {
+    flex-grow: 2;
+    }
+    
+    .l-footer {
+    flex: 1 0px;
+    }
+    
+    .r-footer {
+    flex: 2 0px;
+    }
+    }
+    
