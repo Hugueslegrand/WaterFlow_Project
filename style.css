@@ -1,0 +1,89 @@
+
+body {
+    margin: 0;
+    background: white;
+    background-color: #C2CAD0;
+}
+nav {
+    background-color:rgb(82, 75, 191) ;
+    width: 100%;
+    overflow: auto;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+li {
+    float: right;
+}
+nav a {
+    width: 120px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    color: gold;
+    padding: 40px 10px;
+    font-family: Arial;
+}
+nav a:hover {
+    background-color: rgb(163, 220, 250);
+    color: black;
+    padding: 25px;
+}
+.WaterFlow-logo {
+    float: left;
+    padding: 10px;
+    padding-left: 2rem;
+}
+h1 {
+    float: left;
+    padding: 16px 10px;
+    font-family: Arial;
+    color: gold;
+}
+div {
+    border: solid 3px rgb(82, 75, 191);
+    border-radius: 5px 5px 5px 5px;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-left: 9rem;
+    margin-right: 1rem;
+    background-color: white;
+    width: 80%;
+    padding: 5px;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid 3px;
+    text-align: center;
+    padding: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 5px 5px 5px 5px;
+    background-color: rgb(49, 98, 203);
+    color: gold;
+    
+}
+h3 {
+    margin-left: 34rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    font-size: 20px;
+}
+button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 40px;
+    background-color: gold;
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 10px;
+}
