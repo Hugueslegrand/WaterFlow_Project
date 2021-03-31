@@ -1,0 +1,8 @@
+Teamnaam:		WaterFlow
+Groepcode: 		G_1Prog_D2
+Keuze project: 	Lego(UC3 + UC6)
+
+Naam leden:
+				-Kiendrebeogo Hugues Legrand
+				-Ibragim Ismailov
+				-Botuna Yolo Jean-robert
