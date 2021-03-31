@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <div class="logo">
+                <img src="assets/Legomasters-logo-black.svg" alt="Legomaster logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="startpaginaLego.html">Home</a></li>
+                <li><a href="../MinifigSets/sets1.html">Sets</a></li>
+                <li><a href="#">Minifiguren</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+        <script src="js/navBarBurger.js"></script>
+    </header>
+
+    <main class="startPaginaMain">
+
+        <section>
+            <a href="#" class="button1" id="button1">Aantal te ordenen minifigs toevoegen</a>
+            <div class="popup">
+                <div class="popup-content">
+                    <img src="" alt="sluiten" class="close">
+                    <input type="text" placeholder="Geef hier het aantal dat je wilt ordenen">
+                    <a href="#" class="button2">Toevoegen</a>
+                </div>
+            </div>
+        </section>
+        <section class="startPaginaCounters">
+            <div class="counterContainer">
+                <div>
+                    
+                    <div class="startPaginaCounter" data-target="2400">0</div>
+                    <h3>Nog te ordenen minifigs</h3>
+                </div>
+                <div>
+                    
+                    <div class="startPaginaCounter" data-target="2000">0</div>
+                    <h3>Aantal geordende minifiguren</h3>
+                </div>
+            </div>
+        </section>
+        <script src="js/startpaginaCounter.js"></script>
+        <script src="js/startPopUp.js"></script>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__addr">
+            <img src="assets/Legomasters-logo-black.svg" alt="">
+
+            <h2>Contact</h2>
+            <address>
+                Lange Nieuwstraat 101, 2000 Antwerpen<br>
+
+                <a class="footer__btn" href="mailto:example@gmail.com">Email ons</a>
+            </address>
+        </div>
+
+        <ul class="footer__nav">
+            <li class="nav__item">
+                <h2 class="nav__title">Menu</h2>
+                <ul class="nav__ul">
+                    <li>
+                        <a href="startpaginaLego.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="../MinifigSets/sets1.html">Sets</a>
+                    </li>
+                    <li>
+                        <a href="#">Minifiguren</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <h2 class="nav__title">About</h2>
+                <ul class="nav__ul">
+                    <li>
+                        <a href="../fe-landing-page-themadienst/waterflow fe/index.html#about" target="_blank" >Het bedrijf</a>
+                    </li>
+                    <li>
+                        <a href="#">Het team</a>
+                    </li>
+                    <li>
+                        <a href="../fe-landing-page-themadienst/waterflow fe/index.html" target="_blank" >Onze motto</a>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="nav__item">
+                <h2 class="nav__title">Vind ons op</h2>
+                <ul class="nav__ul">
+                    <li>
+                        <a href="#">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="#">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="#">Instagram</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="legal">
+            <p>&copy; 2021 WaterFlow. All rights reserved.</p>
+
+        </div>
+    </footer>
+</body>
+
+</html>
