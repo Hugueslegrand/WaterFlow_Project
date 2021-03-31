@@ -10,13 +10,6 @@ nav{
 }
 
 
-
-.logo{
-    color: rgb(226, 226, 226);
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 20px;
-}
 .nav-links{
     display: flex;
     justify-content: space-around;
@@ -30,6 +23,11 @@ nav{
     font-size: 14px;
 
 }
+
+.nav-links a:hover{
+    color: #fff;
+}
+
 .nav-links li{
     list-style: none;
     
@@ -40,6 +38,11 @@ nav{
     cursor: pointer;
 
 }
+
+.nav-active{
+    transform: translateX(0%);
+}
+
 .burger div{
     width: 25px;
     height: 3px;
@@ -49,9 +52,7 @@ nav{
 
 }
 
-.nav-active{
-    transform: translateX(0%);
-}
+
 
 @keyframes navLinkFade{
     from{
@@ -175,7 +176,8 @@ body li {
     transition: .6s;
 }
 
-button {
+
+.buy-1 {
     text-align: center;
     font-size: 24px;
     color: orange;
@@ -187,9 +189,6 @@ button {
     margin-top: 5px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-}
-
-.buy-1 {
     background-color: #2183a2;
 }
 
@@ -206,14 +205,14 @@ button {
     .content {
         width: 100%;
     }
-    
+   
     .nav-links{
         position: absolute;
         right: 0px;
         height: 92vh;
         top: 8vh;
         background-color:#05386B;
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
         width: 50%;

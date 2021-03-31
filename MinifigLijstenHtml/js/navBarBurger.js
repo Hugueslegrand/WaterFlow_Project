@@ -5,6 +5,7 @@ const navSlide = ()=>{
 
 
     burger.addEventListener('click', ()=>{
+        nav.style.display = "flex";
 
         //Toggle Nav
         nav.classList.toggle('nav-active');
