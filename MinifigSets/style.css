@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+
 /*main*/
 .WaterFlow-section2{
     display: flex;
@@ -34,7 +37,7 @@ margin: 50px 0;
 .Text7,.Text8,.Text9,
 .Text10,.Text11,.Text12
 ,.Text13 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--body-font);
     border: solid 3px;
     text-align: center;
     padding: 1rem;
@@ -45,8 +48,9 @@ margin: 50px 0;
     color: gold;
 }
 h3 {
+    text-transform: uppercase;
     margin-left: 34rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--body-font);
     padding: 10px;
     font-size: 20px;
 }
@@ -70,10 +74,10 @@ h3 {
     }
     
     body {
-    font-family: Arial;
-    margin: 0;
+        font-family: var(--body-font);
+        margin: 0;
     display: grid;
-    font-size: 14px;
+    font-size: 18px;
     background-color: #C2CAD0;
     }
   

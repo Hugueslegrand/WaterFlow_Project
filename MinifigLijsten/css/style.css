@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 /*nav css*/
 nav{
@@ -6,7 +7,7 @@ nav{
     align-items: center;
     min-height: 8vh;
     background-color:#05386B;
-    font-family:'Poppins', sans-serif;
+    font-family: var(--body-font);
 }
 
 
@@ -20,7 +21,7 @@ nav{
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 18px;
 
 }
 
@@ -82,7 +83,7 @@ nav{
 
 body {
     margin: 0;
-    font-family: Nunito Sans;
+    font-family: var(--body-font);
     
     background-color: #C2CAD0;
 }
@@ -276,7 +277,7 @@ body li {
   
   .footer__addr h2 {
     margin-top: 1.3em;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 400;
   }
   .footer__addr address{
@@ -285,7 +286,7 @@ body li {
   
   .nav__title {
     font-weight: 400;
-    font-size: 15px;
+    font-size: 18px;
   }
   
   .footer address {
@@ -303,7 +304,7 @@ body li {
     color: orange;
     line-height: 0;
     margin: 0.6em 0;
-    font-size: 1rem;
+    font-size: 18px;
     padding: 0 1.3em;
   }
   
@@ -334,6 +335,7 @@ body li {
   
   .nav__ul a {
     color: orange;
+    font-size: 18px;
   }
   .nav__ul{
       display: inline;

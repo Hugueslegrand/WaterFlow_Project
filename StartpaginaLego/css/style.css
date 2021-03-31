@@ -78,6 +78,10 @@ input{
 }
 
 .startPaginaMain{
+    background: url(../assets/legomasters.jpg) no-repeat center;
+    background-size: cover;
+    padding: 40px;
+    
     box-sizing: border-box;
     margin:0;
     padding: 0;
@@ -118,13 +122,6 @@ nav{
 }
 
 
-
-.logo{
-    color: rgb(226, 226, 226);
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 20px;
-}
 .nav-links{
     display: flex;
     justify-content: space-around;
@@ -135,7 +132,7 @@ nav{
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 18px;
 
 }
 .nav-links li{
@@ -310,6 +307,7 @@ button {
 }
 
 @media(max-width: 768px) {
+   
     .startPaginaCounters .counterContainer{
         grid-template-columns: repeat(1, 1fr);  
     }
@@ -395,7 +393,7 @@ button {
   
   .footer__addr h2 {
     margin-top: 1.3em;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 400;
   }
   .footer__addr address{
@@ -404,7 +402,7 @@ button {
   
   .nav__title {
     font-weight: 400;
-    font-size: 15px;
+    font-size: 18px;
   }
   
   .footer address {
@@ -422,7 +420,7 @@ button {
     color: orange;
     line-height: 0;
     margin: 0.6em 0;
-    font-size: 1rem;
+    font-size: 18px;
     padding: 0 1.3em;
   }
   
@@ -453,6 +451,7 @@ button {
   
   .nav__ul a {
     color: orange;
+    font-size: 18px;
   }
   .nav__ul{
       display: inline;
