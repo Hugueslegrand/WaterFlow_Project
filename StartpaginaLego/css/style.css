@@ -331,7 +331,7 @@ button {
         height: 92vh;
         top: 8vh;
         background-color:#05386B;
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
         width: 50%;
