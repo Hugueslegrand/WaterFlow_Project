@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat",sans-serif ;
+}
+body {
+    background: url(/assets/water2.jpg) no-repeat center;
+    background-size: cover;
+    padding: 40px;
+}
+.Contact-section h1 {
+    text-align: center;
+    color:white;
+}
+.Border {
+    width: 500px;
+    height: 5px;
+    background: rgb(163, 220, 250);
+    margin: 40px auto;
+    border-radius: 10px 10px 10px 10px;
+}
+.contact-from {
+    max-width: 600px;
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden;
+}
+.contact-from-text {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 0;
+    border-radius: 10px 10px 10px 10px;
+    background: rgb(255, 255, 255);
+    padding: 20px 40px;
+    outline: none;
+    color: rgb(0, 0, 0);
+    transition: 0,5s;
+}
+.contact-from-text:focus {
+    box-shadow: 0 0 10px 4px rgb(163, 220, 250);
+}
+textarea.contact-from-text {
+    resize: none;
+    height: 120px;
+}
+.contact-form-btn {
+    float: right;
+    border: 0;
+    background: rgb(29, 117, 165);
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0,5s;
+    color: white;
+}
+.contact-form-btn:hover {
+    background: rgb(163, 220, 250);
+    color: black;
+}
+
+nav {
+    width: 100%;
+    overflow: auto;
+    padding: 1rem;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav1,.nav2,.nav3,.nav4,.nav5 {
+    float: right;
+}
+nav a {
+    width: 120px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    padding: 40px 10px;
+    font-family: Arial;
+}
+nav a:hover {
+    box-shadow: 0 0 10px 4px rgb(163, 220, 250);
+    color: black;
+    padding: 25px;
+    border-radius: 10px 10px 10px 10px;
+}
+.WaterFlow-logo {
+    float: left;
+    padding: 10px;
+    padding-left: 2rem;
+}
+h1 {
+    float: left;
+    padding: 40px 20px;
+    font-family: Arial;
+    color: white;
+}
+footer {
+    color:white;
+    font-family: "montserrat",sans-serif ;
+}
