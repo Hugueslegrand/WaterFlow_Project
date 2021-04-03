@@ -545,15 +545,15 @@ box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
   }
 
   .menu__container{
-    grid-template-columns: repeat(3, 210px);
+    grid-template-columns: repeat(2, 300x);
     column-gap: 4rem;
   }
   .menu__content{
     padding: 1.5rem;
   }
   .menu__img{
-    width: 130px;
-    box-shadow: 2px 2px 5px red
+    width: 300px;
+    
   }
 
   .app__store{
