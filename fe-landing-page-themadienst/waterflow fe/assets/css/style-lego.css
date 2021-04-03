@@ -487,16 +487,18 @@ box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
   .about__data, .about__initial,
   .app__data, .app__initial,
   .contact__container, .contact__initial{
-    text-align: initial;
+    text-align: center;
   }
 
   .about__img, .app__img{
     width: 380px;
+    max-height: 300px;
     order: -1;
   }
 
   .contact__container{
     grid-template-columns: 1.75fr 1fr;
+    justify-content: space-between;
     align-items: center;
   }
   .contact__button{
