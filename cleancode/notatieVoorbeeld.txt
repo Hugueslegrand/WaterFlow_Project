@@ -1,0 +1,6 @@
+  set_num: 'fig-000272',
+  name: 'Finn, Stormtrooper Armor',
+  num_parts: 4,
+  set_img_url: null,
+  set_url: 'https://rebrickable.com/minifigs/fig-000272/finn-stormtrooper-armor/',
+  last_modified_dt: '2020-06-27T00:32:04.917744Z'
