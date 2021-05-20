@@ -9,8 +9,10 @@ app.use(express.urlencoded());
 app.set('view engine', 'ejs');
 app.set('port', 3000);
 
+//Variabel om gevonden gegevens gevonden in de API op te slagen
 
 const alleminifiguren = {
+    geordend: 0,
     aantal: 0,
     sets:
     [
@@ -25,7 +27,7 @@ const alleminifiguren = {
 
 
 const legoFigs = async () => {
-    //random nummer voor de pagina
+    //random nummer voor de pagina van de API zodat het niet steeds dezelfde kiest
     let randomPageNummer = Math.round(Math.random() * (100 - 1 + 1) + 1);
     let figs = await fetch1(`https://rebrickable.com//api/v3/lego/minifigs/?page=${randomPageNummer}`, {
         headers: {
@@ -39,7 +41,7 @@ const legoFigs = async () => {
     /**
      * Een lus dat een aantal keren itereert afhankelijk van de hoeveelheid de gebruiker in geeft
      * om een willekeurig minifiguur te halen uit de api
-     * deze gegevens worden tijdelijke opgeslagen
+     * deze gegevens worden tijdelijke opgeslagen in de variabel minifiguur
      */
      
 
@@ -61,7 +63,8 @@ const legoFigs = async () => {
               
 
         /**
-         * Nu gaan we de set gaan halen per gegenereerde minifiguur
+         * Nu gaan we de set gaan halen per gegenereerde minifiguur en hetzelfde doen
+         * om het op te slaan als bij de minifiguren
          */
 
         let sets = await fetch1(`https://rebrickable.com/api/v3/lego/minifigs/${minifiguur.set_nummer}/sets/`, {
@@ -85,9 +88,6 @@ const legoFigs = async () => {
            
         }
 
-        /* console.log(minifiguur.name);
-        console.log(minifiguur.set_img_url+'\n'); */
-        /* console.log(setJson); */
 
     }
     console.log(alleminifiguren);
@@ -118,11 +118,15 @@ app.post('/lego',(req:any,res:any)=>{
 
 app.get('/minifiguren/:index',(req:any,res:any)=>{
     let index = req.params.index;
-    alleminifiguren.aantal = alleminifiguren.aantal -1;
-    let test = alleminifiguren.resultaten;
-    test.splice(index,1);
+    //Aantal te ordenen en geordend dat getoond wordt updaten
+    alleminifiguren.aantal = alleminifiguren.aantal - 1;
+    alleminifiguren.geordend = alleminifiguren.geordend + 1;
+    console.log(alleminifiguren.geordend)
+    //De minifiguur weghalen
+    alleminifiguren.resultaten.splice(index, 1);
+
     console.log(alleminifiguren.resultaten);
-    res.render('sets',alleminifiguren.sets[index]);
+    res.render('sets', alleminifiguren.sets[index]);
 })
 
 app.get('/contact', (req: any, res: any) => {

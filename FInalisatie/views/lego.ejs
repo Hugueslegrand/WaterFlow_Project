@@ -30,8 +30,8 @@
                 <form action="/lego" method="post">
                     <ul>
                         <li>
-                            <label for="aantal">Aantal toe te voegen minifigs</label>
-                            <input min="1" max="100" type="number" name="aantal" id="aantal" value="">
+                            <label for="aantal">Hoeveel minifigs zijn er nog te ordenen? (max.10)</label>
+                            <input min="1" max="10" type="number" name="aantal" id="aantal" value="">
                         </li>
                         <li>
                             <button type='submit' class="button2">Toevoegen</button>
@@ -47,14 +47,16 @@
     <div class="counterContainer">
         
         <div>
-            <div class="startPaginaCounter"  id="field_name" data-target="2400">
+            <div class="startPaginaCounter">
                 <%- '<strong>' + aantal + '</strong><br/>' %>
             </div>
             <h3>Nog te ordenen minifigs</h3>
         </div>
         <div>
             
-            <div class="startPaginaCounter" data-target="2000">0</div>
+            <div class="startPaginaCounter">
+                <%- '<strong>' + geordend + '</strong><br/>' %>
+            </div>
             <h3>Aantal geordende minifiguren</h3>
         </div>
     </div>

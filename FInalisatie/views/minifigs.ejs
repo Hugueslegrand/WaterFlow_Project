@@ -34,8 +34,6 @@
                                 <ul>
                                     <li class="setFoto">
                                     <%- '<strong>' + sets[index].name + '</strong>' %>
-<!--                                     <img src= "<%= sets[index].set_img_url %>" alt="<%= sets[index].name %>" class=" set_img">
- -->                                    <i class="setIcon"> &#x1F6C8</i>
                                 </li>
                                    
                                 </ul>
@@ -50,6 +48,37 @@
                         <% } %>
             </div>  
         </section>
+        <div class="popup">
+            <div class="popup-content">
+                <img src="assets/img/close-icon.png" alt="sluiten" class="close">
+                    <ul>
+                        <li>
+                            <label>Er zijn geen minifiguren meer </label>
+                            <input min="1" max="10" type="number" name="aantal" id="aantal" value="">
+                        </li>
+                        <li>
+                            <button class="button2">Meer gaan toevoegen</button>
+                        </li>
+                </ul>
+        </div>
+        <section class="startPaginaCounters">
+            <div class="counterContainer">
+                
+                <div>
+                    <div class="startPaginaCounter">
+                        <%- '<strong>' + aantal + '</strong><br/>' %>
+                    </div>
+                    <h3>Nog te ordenen minifigs</h3>
+                </div>
+                <div>
+                    
+                    <div class="startPaginaCounter">
+                        <%- '<strong>' + geordend + '</strong><br/>' %>
+                    </div>
+                    <h3>Aantal geordende minifiguren</h3>
+                </div>
+            </div>
+        </section>
         <script src="js/setsPopup.js"></script>
-        
+        <script src="js/leegMinifigs.js"></script>
 <%- include('legoFooter'); %>
