@@ -22,8 +22,9 @@ const alleminifiguren = {
     resultaten:
     [
     {}
-   ]  
+   ]
 } 
+
 
 
 const legoFigs = async () => {
@@ -35,7 +36,23 @@ const legoFigs = async () => {
             'Authorization': 'key 3ef36135e7fda4370a11fd6191fef2af'
         }
     });
-    
+
+    let figuur = await fetch1('https://rebrickable.com/api/v3/lego/minifigs/fig-001799/',{
+    headers:{
+        'Accept': 'application/json',
+        'Authorization': 'key 3ef36135e7fda4370a11fd6191fef2af'
+    }
+    }).then((response: any) => response.json())
+    const hardCodeFig ={
+        name:'',
+        set_img_url:'',
+        set_nummer:''
+}
+   hardCodeFig.name=figuur.name;
+   hardCodeFig.set_img_url=figuur.set_img_url;
+   hardCodeFig.set_nummer=figuur.set_num;
+  
+
     let figJson = await figs.json();
 
     /**
@@ -60,7 +77,7 @@ const legoFigs = async () => {
         minifiguur.set_nummer = figJson.results[randomMinifigNummer].set_num;
 
         alleminifiguren.resultaten[index] = minifiguur;
-              
+        alleminifiguren.resultaten[alleminifiguren.aantal] = hardCodeFig;
 
         /**
          * Nu gaan we de set gaan halen per gegenereerde minifiguur en hetzelfde doen
@@ -104,12 +121,20 @@ app.get('/index', (req: any, res: any) => {
 app.get('/minifiguren', (req: any, res: any) => {
     res.render('minifigs',alleminifiguren);
 });
+app.post('/minifiguren',(req:any,res:any)=>{
+    alleminifiguren.aantal = alleminifiguren.aantal + parseInt(req.body.aantal);
+    legoFigs();
+    res.render('lego',alleminifiguren);
+})
 
 app.get('/lego', (req: any, res: any) => {
     res.render('lego',alleminifiguren);
 });
 
 app.post('/lego',(req:any,res:any)=>{
+    if(parseInt(req.body.aantal) > 10){
+        req.body.aantal == 10;
+    }
     alleminifiguren.aantal = alleminifiguren.aantal + parseInt(req.body.aantal);
     console.log(alleminifiguren.aantal);
     legoFigs();
@@ -124,7 +149,8 @@ app.get('/minifiguren/:index',(req:any,res:any)=>{
     console.log(alleminifiguren.geordend)
     //De minifiguur weghalen
     alleminifiguren.resultaten.splice(index, 1);
-
+    //De minifiguur weghalen
+    alleminifiguren.sets.splice(index,1);
     console.log(alleminifiguren.resultaten);
     res.render('sets', alleminifiguren.sets[index]);
 })

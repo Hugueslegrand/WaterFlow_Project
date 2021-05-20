@@ -1,7 +1,23 @@
 <%- include('legoHeader'); %>
-        
+<div class="popupAlt">
+    <div class="popupAlt-content">
+        <form action="/minifiguren" method="post">
+            <ul>
+                <li>
+                    <label for="aantal">Er zijn geen minifiguren meer </label>
+                    <input min="1" max="10" type="number" name="aantal" id="aantal" value="">
+                </li>
+                <li>
+                    <button type="submit" class="popupAltButton">Meer gaan toevoegen</button>
+                </li>
+        </ul>
+        </form>
+            
+</div>
+</div>
         <!--========== HOME ==========-->
         <section class="home" id="home">
+            
             <div class="home__container bd-container bd-grid">
                 <div class="home__data">
                     <h1 class="home__title">Lego Sets</h1>
@@ -11,7 +27,7 @@
                 <img src="img/lego-2.svg" alt="" class="home__img">
             </div>
         </section>
-
+        
 
         <!--========== FIGS ==========-->
         <div class="select">
@@ -22,8 +38,9 @@
             <h2 class="section-title">Je kan kiezen uit de volgende figuren</h2>
             <!--========== Familiehouse ==========-->
             <div class="menu__container bd-grid">
+                
                
-                    <% for (let index = 0; index < aantal; index++) {
+                    <% for (let index = 0; index < resultaten.length; index++) {
                         %>
                         <div class="menu__content">
                             <img src= "<%= resultaten[index].set_img_url %>" alt="<%= resultaten[index].name %>" class="menu__img">
@@ -50,20 +67,7 @@
         </section>
         
 
-        <div class="popup">
-            <div class="popup-content">
-                <img src="assets/img/close-icon.png" alt="sluiten" class="close">
-                    <ul>
-                        <li>
-                            <label>Er zijn geen minifiguren meer </label>
-                            <input min="1" max="10" type="number" name="aantal" id="aantal" value="">
-                        </li>
-                        <li>
-                            <button class="button2">Meer gaan toevoegen</button>
-                        </li>
-                </ul>
-        </div>
-    </div>
+        
         <section class="startPaginaCounters">
             <div class="counterContainer">
                 <div>
