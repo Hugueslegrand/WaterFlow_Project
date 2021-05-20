@@ -620,7 +620,7 @@ h4 {
 }
 
 
-/* brands */
+/* Brands */
 
 .brands {
     margin: 100px auto;
@@ -766,10 +766,10 @@ counters lego pagina*/
 
 
 .popup{
-  
+  font-family: 'Poppins', sans-serif;
   width: 50%;
   height: 50%;
-  position: absolute;
+  position: relative;
   top: 0;
   justify-content: center;
   align-items: center;
@@ -793,6 +793,7 @@ counters lego pagina*/
 }
 
 .popup-content{
+  font-family: 'Poppins', sans-serif;
   height: 250px;
   width: 500px;
   background: #fff;
@@ -846,8 +847,7 @@ background: radial-gradient(circle, rgba(56,129,233,1) 0%, rgba(58,218,199,1) 82
 }
 
 
-/*
-CONTACT*/
+/* Contact */
 .Contact-section {
 
   padding: 40px;
