@@ -769,7 +769,7 @@ counters lego pagina*/
   font-family: 'Poppins', sans-serif;
   width: 50%;
   height: 50%;
-  position: relative;
+  position: absolute;
   top: 0;
   justify-content: center;
   align-items: center;
