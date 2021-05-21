@@ -130,7 +130,7 @@ app.get('/minifiguren', (req: any, res: any) => {
 app.post('/minifiguren',(req:any,res:any)=>{
     alleminifiguren.aantal = alleminifiguren.aantal + parseInt(req.body.aantal);
     legoFigs();
-    res.render('lego',alleminifiguren);
+    res.render('minifigs',{alleminifiguren});
 })
 
 app.get('/lego', (req: any, res: any) => {
@@ -163,7 +163,7 @@ app.post('/minifiguren/:index',(req:any,res:any)=>{
     //De minifiguur weghalen
  
     alleminifiguren.sets.splice(index,1);
-    res.render('sets', {alleminifiguren});
+    res.render('minifigs', {alleminifiguren});
 })
 
 app.get('/contact', (req: any, res: any) => {
