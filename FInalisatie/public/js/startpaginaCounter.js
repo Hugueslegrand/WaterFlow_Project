@@ -11,6 +11,3 @@ document.querySelector(".close").addEventListener("click",()=>{
 
 });
 
-document.querySelector(".button2").addEventListener("click",()=>{
-    document.querySelector(".popup").style.display = "none";
-});
