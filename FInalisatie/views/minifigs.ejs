@@ -36,24 +36,27 @@
         <section class="menu section bd-container" id="menu">
             <span class="section-subtitle">Collectie</span>
             <h2 class="section-title">Je kan kiezen uit de volgende figuren</h2>
-            <!--========== Familiehouse ==========-->
+            
             <div class="menu__container bd-grid">
                 
                
-                    <% for (let index = 0; index < resultaten.length; index++) {
+                    <% for (let index = 0; index < alleminifiguren.resultaten.length; index++) {
                         %>
                         <div class="menu__content">
-                            <img src= "<%= resultaten[index].set_img_url %>" alt="<%= resultaten[index].name %>" class="menu__img">
+                            <img src= "<%= alleminifiguren.resultaten[index].set_img_url %>" alt="<%= alleminifiguren.resultaten[index].name %>" class="menu__img">
                             <h3 class="menu__name">
-                                <%- '<strong>' + resultaten[index].name + '</strong><br/>' %>
+                                <%- '<strong>' + alleminifiguren.resultaten[index].name + '</strong><br/>' %>
                             </h3>
                             <span class="menu__detail">Dit minifiguur behoort tot de volgende sets:
+                                <% for (let i = 0; i < alleminifiguren.sets[index].lengte; i++) {
+                                    %>
                                 <ul>
                                     <li class="setFoto">
-                                    <%- '<strong>' + sets[index].name + '</strong>' %>
+                                    <%- '<strong>' + alleminifiguren.sets[index].results[i].name + '</strong>' %>
                                 </li>
                                    
                                 </ul>
+                                <% } %>
                             </span>
                             <p>
                               
@@ -72,14 +75,14 @@
             <div class="counterContainer">
                 <div>
                     <div class="startPaginaCounter">
-                        <%- '<strong>' + aantal + '</strong><br/>' %>
+                        <%- '<strong>' + alleminifiguren.aantal + '</strong><br/>' %>
                     </div>
                     <h3>Nog te ordenen minifigs</h3>
                 </div>
                 <div>
                     
                     <div class="startPaginaCounter">
-                        <%- '<strong>' + geordend + '</strong><br/>' %>
+                        <%- '<strong>' + alleminifiguren.geordend + '</strong><br/>' %>
                     </div>
                     <h3>Aantal geordende minifiguren</h3>
                 </div>

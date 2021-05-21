@@ -1,15 +1,34 @@
 <%- include('legoHeader'); %>
+<div class="popupSet">
+    <div class="popupSet-content">
+        <input type="text" placeholder="U heeft het set succesvol geordend" disabled>
+        <a href="/minifiguren" class="button">Terug naar minifiguren</a>
+        
+</div>
+</div>
         <!--========== HOME ==========-->
         <section class="home" id="home">
-            <div class="home__container bd-container bd-grid">
+            <div class=" bd-container bd-grid">
+               
                 <div class="home__data">
+                    <% for (let i = 0; i < alleminifiguren.sets[alleminifiguren.paramsIndex].lengte; i++) {
+                        %>
+                        <form action="/minifiguren/<%= alleminifiguren.paramsIndex %>" method="post">
                     <h1 class="set_h1">
-                        <%- name %>
+                        <ul>
+                            <%- '<strong>' +  alleminifiguren.sets[alleminifiguren.paramsIndex].results[i].name+ '</strong>' %>
+                           
+                        </ul>
+                       
                    </h1>
-                   <a href="/minifiguren" class="button">Dit set bevestigen</a>
-                 </div>
-    
-                <img src="<%= set_img_url %>" alt="" class="home__img">
+                   <button type='submit' class="button bevestiging">Dit set bevestigen</button>
+                <img src="<%= alleminifiguren.sets[alleminifiguren.paramsIndex].results[i].set_img_url %>" alt="" class="set_img">
+            </form>   
+                <% } %>
+                   
+            </div>
+                
+                
             </div>
         </section>
 
@@ -27,7 +46,7 @@
 <!--===== APP =======-->
 
 <script src="/js/startpaginaCounter.js"></script>
-
+<script src="/js/setBevestiging.js"></script>
 
 <%- include('legoFooter'); %>
 

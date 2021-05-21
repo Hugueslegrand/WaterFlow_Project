@@ -12,11 +12,13 @@ app.set('port', 3000);
 //Variabel om gevonden gegevens gevonden in de API op te slagen
 
 const alleminifiguren = {
+    paramsIndex:0,
     geordend: 0,
     aantal: 0,
     sets:
-    [
-        {}
+    [ 
+        {
+        }
     ]
     ,
     resultaten:
@@ -37,20 +39,6 @@ const legoFigs = async () => {
         }
     });
 
-    let figuur = await fetch1('https://rebrickable.com/api/v3/lego/minifigs/fig-001799/',{
-    headers:{
-        'Accept': 'application/json',
-        'Authorization': 'key 3ef36135e7fda4370a11fd6191fef2af'
-    }
-    }).then((response: any) => response.json())
-    const hardCodeFig ={
-        name:'',
-        set_img_url:'',
-        set_nummer:''
-}
-   hardCodeFig.name=figuur.name;
-   hardCodeFig.set_img_url=figuur.set_img_url;
-   hardCodeFig.set_nummer=figuur.set_num;
   
 
     let figJson = await figs.json();
@@ -61,7 +49,7 @@ const legoFigs = async () => {
      * deze gegevens worden tijdelijke opgeslagen in de variabel minifiguur
      */
      
-
+     
     for (let index = 0; index < alleminifiguren.aantal; index++) {
         const minifiguur =
         {
@@ -77,13 +65,15 @@ const legoFigs = async () => {
         minifiguur.set_nummer = figJson.results[randomMinifigNummer].set_num;
 
         alleminifiguren.resultaten[index] = minifiguur;
-        alleminifiguren.resultaten[alleminifiguren.aantal] = hardCodeFig;
-
+    
+    
+    
         /**
          * Nu gaan we de set gaan halen per gegenereerde minifiguur en hetzelfde doen
          * om het op te slaan als bij de minifiguren
          */
 
+        
         let sets = await fetch1(`https://rebrickable.com/api/v3/lego/minifigs/${minifiguur.set_nummer}/sets/`, {
             headers: {
                 'Accept': 'application/json',
@@ -91,23 +81,39 @@ const legoFigs = async () => {
             }
         });
         let setJson = await sets.json();
+        console.log(setJson)
         let setCount = setJson.count;
+        const setten =
+       {
+         lengte:setCount,
+         results:[
+         
+         {
+         }
+        ]
+      }
+         ;
+        
         for (let setIndex = 0; setIndex < setCount; setIndex++) {
-            const set =
-            {
+            const set = {
                 name: '',
                 set_img_url: ''
             }
-                ;
             set.name = setJson.results[setIndex].name;
             set.set_img_url = setJson.results[setIndex].set_img_url; 
-            alleminifiguren.sets[index] = set;
-           
+            setten.results[setIndex] = set;
+        
         }
-
+        alleminifiguren.sets[index] = setten;
+        
 
     }
-    console.log(alleminifiguren);
+   
+     console.log(alleminifiguren); 
+     console.log(alleminifiguren.sets)
+     console.log(alleminifiguren.sets.length)
+     
+ 
    
 };
 
@@ -119,7 +125,7 @@ app.get('/index', (req: any, res: any) => {
     res.render('index');
 });
 app.get('/minifiguren', (req: any, res: any) => {
-    res.render('minifigs',alleminifiguren);
+    res.render('minifigs',{alleminifiguren});
 });
 app.post('/minifiguren',(req:any,res:any)=>{
     alleminifiguren.aantal = alleminifiguren.aantal + parseInt(req.body.aantal);
@@ -143,16 +149,21 @@ app.post('/lego',(req:any,res:any)=>{
 
 app.get('/minifiguren/:index',(req:any,res:any)=>{
     let index = req.params.index;
-    //Aantal te ordenen en geordend dat getoond wordt updaten
-    alleminifiguren.aantal = alleminifiguren.aantal - 1;
-    alleminifiguren.geordend = alleminifiguren.geordend + 1;
-    console.log(alleminifiguren.geordend)
+    alleminifiguren.paramsIndex = index;
+ 
+    res.render('sets', {alleminifiguren});
+})
+app.post('/minifiguren/:index',(req:any,res:any)=>{
+    let index = req.params.index;
+     //Aantal te ordenen en geordend dat getoond wordt updaten
+     alleminifiguren.aantal = alleminifiguren.aantal - 1;
+     alleminifiguren.geordend = alleminifiguren.geordend + 1;
     //De minifiguur weghalen
     alleminifiguren.resultaten.splice(index, 1);
     //De minifiguur weghalen
+ 
     alleminifiguren.sets.splice(index,1);
-    console.log(alleminifiguren.resultaten);
-    res.render('sets', alleminifiguren.sets[index]);
+    res.render('sets', {alleminifiguren});
 })
 
 app.get('/contact', (req: any, res: any) => {
