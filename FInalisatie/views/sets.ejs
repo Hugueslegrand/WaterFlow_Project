@@ -1,0 +1,38 @@
+<%- include('legoHeader'); %>
+
+        
+        <section class="menu section bd-container" id="menu">
+            <span class="section-subtitle">SETS</span>
+            <h2 class="section-title">Je kan kiezen uit de volgende sets</h2>
+            <div class="menu__container bd-grid">
+               
+            <% for (let i = 0; i < alleminifiguren.sets[alleminifiguren.paramsIndex].lengte; i++) {
+                %>
+                <div class="menu__content">
+                    
+                        <form action="/minifiguren/<%= alleminifiguren.paramsIndex %>" method="post">
+                            <img src="<%= alleminifiguren.sets[alleminifiguren.paramsIndex].results[i].set_img_url %>" alt="" class="setFoto">
+                    <h3 class="menu__name">
+                            <%- '<strong>' +  alleminifiguren.sets[alleminifiguren.paramsIndex].results[i].name+ '</strong>' %>
+                   </h3>
+                   <button type='submit' class="button bevestiging">Dit set bevestigen</button>
+               
+            </form>   
+              
+                   
+            </div>
+            <% } %>
+                
+                
+            </div>
+        </section>
+
+        
+<!--===== APP =======-->
+
+<script src="/js/startpaginaCounter.js"></script>
+
+
+<%- include('legoFooter'); %>
+
+
