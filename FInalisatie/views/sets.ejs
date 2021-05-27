@@ -1,41 +1,31 @@
 <%- include('legoHeader'); %>
 
-        <!--========== HOME ==========-->
-        <section class="home" id="home">
-            <div class=" bd-container bd-grid">
-               
-                <div class="home__data">
-                    <% for (let i = 0; i < alleminifiguren.sets[alleminifiguren.paramsIndex].lengte; i++) {
-                        %>
+        
+        <section class="menu section bd-container" id="menu">
+            <div class="menu__container bd-grid">
+                <span class="section-subtitle">Collectie</span>
+            <h2 class="section-title">Je kan kiezen uit de volgende figuren</h2>
+            <% for (let i = 0; i < alleminifiguren.sets[alleminifiguren.paramsIndex].lengte; i++) {
+                %>
+                <div class="menu__content">
+                    
                         <form action="/minifiguren/<%= alleminifiguren.paramsIndex %>" method="post">
-                    <h1 class="set_h1">
-                        <ul>
+                            <img src="<%= alleminifiguren.sets[alleminifiguren.paramsIndex].results[i].set_img_url %>" alt="" class="setFoto">
+                    <h3 class="menu__name">
                             <%- '<strong>' +  alleminifiguren.sets[alleminifiguren.paramsIndex].results[i].name+ '</strong>' %>
-                           
-                        </ul>
-                       
-                   </h1>
+                   </h3>
                    <button type='submit' class="button bevestiging">Dit set bevestigen</button>
-                <img src="<%= alleminifiguren.sets[alleminifiguren.paramsIndex].results[i].set_img_url %>" alt="" class="set_img">
+               
             </form>   
-                <% } %>
+              
                    
             </div>
+            <% } %>
                 
                 
             </div>
         </section>
 
-        <section class="home" id="home">
-            <div class="home__container bd-container bd-grid">
-                <div class="home__data">
-                    
-                   
-                 </div>
-                
-                 <img src="img/ClipartKey_2241852.png" alt="" class="home__img">
-            </div>
-        </section>
         
 <!--===== APP =======-->
 
