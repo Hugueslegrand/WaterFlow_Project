@@ -1,4 +1,6 @@
 
+/* DE WAARSCHUWING TONEN DAT JE NIET BENT INGESCHREVEN VOOR DAT THEMA
+ */
 document.getElementById("lordbutton").addEventListener("click",()=>{
     document.querySelector(".popup3").style.display = "flex";
 

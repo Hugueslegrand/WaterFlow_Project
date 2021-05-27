@@ -31,7 +31,7 @@ const alleminifiguren = {
 
 const legoFigs = async () => {
     //random nummer voor de pagina van de API zodat het niet steeds dezelfde kiest
-    let randomPageNummer = Math.round(Math.random() * (100 - 1 + 1) + 1);
+    let randomPageNummer = Math.round(Math.random() * (100) + 1);
     let figs = await fetch1(`https://rebrickable.com//api/v3/lego/minifigs/?page=${randomPageNummer}`, {
         headers: {
             'Accept': 'application/json',
